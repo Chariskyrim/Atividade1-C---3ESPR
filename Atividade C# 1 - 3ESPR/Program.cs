@@ -38,6 +38,13 @@ namespace CineCidade
             decimal valorFinal = custoBruto - desconto;
 
             bool elegivelSessaoNoturna = quantidade > 1 && idade >= 18;
+
+            Console.WriteLine("\n=== Resumo da Compra ===");
+            Console.WriteLine($"Cliente: {nome.ToUpper()}");
+            Console.WriteLine($"Valor bruto: {custoBruto.ToString("C", cultura)}");
+            Console.WriteLine($"Desconto: {desconto.ToString("C", cultura)}");
+            Console.WriteLine($"Valor final: {valorFinal.ToString("C", cultura)}");
+            Console.WriteLine($"Elegível para Sessão Noturna: {elegivelSessaoNoturna}");
         }
     }
 }
