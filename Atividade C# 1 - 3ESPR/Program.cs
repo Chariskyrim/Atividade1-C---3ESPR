@@ -1,1 +1,11 @@
-﻿Console.WriteLine("Hello, World!");
+﻿using System;
+
+namespace CineCidade
+{
+    class Program
+    {
+        static void Main()
+        {
+        }
+    }
+}
