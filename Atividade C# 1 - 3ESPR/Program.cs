@@ -36,6 +36,8 @@ namespace CineCidade
                 : 0.00m;
 
             decimal valorFinal = custoBruto - desconto;
+
+            bool elegivelSessaoNoturna = quantidade > 1 && idade >= 18;
         }
     }
 }
