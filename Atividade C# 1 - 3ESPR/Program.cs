@@ -5,6 +5,12 @@ namespace CineCidade
 {
     class Program
     {
+        // Valores fixos do sistema (constantes reutilizáveis)
+        const decimal TaxaConveniencia = 5.00m;
+        const decimal PrecoIngresso = 25.00m;
+        const string CupomValido = "CINEMA10";
+        const decimal PercentualDesconto = 0.10m;
+
         static void Main()
         {
             var cultura = new CultureInfo("pt-BR");
@@ -22,6 +28,8 @@ namespace CineCidade
 
             Console.Write("Idade do cliente: ");
             int idade = int.Parse(Console.ReadLine());
+
+            decimal custoBruto = TaxaConveniencia + (PrecoIngresso * quantidade);
         }
     }
 }
