@@ -30,6 +30,12 @@ namespace CineCidade
             int idade = int.Parse(Console.ReadLine());
 
             decimal custoBruto = TaxaConveniencia + (PrecoIngresso * quantidade);
+
+            decimal desconto = cupom.Trim().Equals(CupomValido, StringComparison.OrdinalIgnoreCase)
+                ? custoBruto * PercentualDesconto
+                : 0.00m;
+
+            decimal valorFinal = custoBruto - desconto;
         }
     }
 }
